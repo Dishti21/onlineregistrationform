@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<script src="reg.js"></script>
+	<style>
+	
+	body {
+			background-image: url("join-background.jpg");
+			color: white;
+	}
+		.error {
+			color: red;
+			font-size: 0.8em;
+			margin-bottom: 5px;
+		}
+		form label{
+			
+			font-family: Arial;
+			font-size:20px;
+			margin-bottom: 10px;
+			margin-left: 20px;
+		}
+		
+		h2{
+			margin-left:20px;
+		}
+	</style>
+</head>
+<body>
+	<h2><b>Online Registration Form</b></h2>
+	<form id="registration-form" action="confirmation.html" method="post">
+		<label for="title">Title:</label>
+		<input type="text" id="title" name="title" size="20" required><br>
+		<br>
+		<label for="firstname">First Name:</label>
+		<input type="text" id="firstname" name="firstname" size="20" required><br>
+		<br>
+		<label for="lastname">Last Name:</label>
+		<input type="text" id="lastname" name="lastname" size="20" required><br>
+		<br>
+		<label for="street">Street:</label>
+		<input type="text" id="street" name="street" size="50" required><br>
+		<br>
+		<label for="city">City:</label>
+		<input type="text" id="city" name="city" autocomplete="on" list="citylist" required>
+		<datalist id="citylist">
+			<option value="Port Louis">
+			<option value="Beau Bassin-Rose Hill">
+			<option value="Curepipe">
+			<option value="Quatre Bornes">
+			<option value="Vacoas-Phoenix">
+		</datalist><br>
+		<br>
+		<label for="mobile">Mobile Contact Number:</label>
+		<input type="text" id="mobile" name="mobile" size="15" required><br>
+		<br>
+		<label for="email">Email Address:</label>
+		<input type="email" id="email" name="email" size="50" required><br>
+		<br>
+		<label for="gender">Gender:</label>
+		<input type="radio" id="male" name="gender" value="M">
+		<label for="male">Male</label>
+		<input type="radio" id="female" name="gender" value="F">
+		<label for="female">Female</label><br>
+		<br>
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob"><br>
+		<br>
+		<label for="nationality">Nationality:</label>
+		<select id="nationality" name="nationality" required>
+			<option value="Mauritian">Mauritian</option>
+			<option value="Other">Other</option>
+		</select><br>
+		<br>
+		<div id="specify-nationality" style="display: none;">
+			<label for="other-nationality">Specify Nationality:</label>
+			<input type="text" id="other-nationality" name="other-nationality"><br>
+		</div>
+		<br>
+		<div id="nic-passport">
+			<label for="nic-passport">NIC/Passport Number:</label>
+			<input type="text" id="nic-passport" name="nic-passport" required><br>
+		</div>
+		<br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br>
+		<br>
+		<label for="confirm-password">Confirm Password:</label>
+		<input type="password" id="confirm-password" name="confirm-password" required><br>
+		<br>
+		<label>
+		  <input type="checkbox" name="terms-and-conditions" required>
+		  I have read and agree to the terms and conditions
+		</label>
+		<input type="submit" name="register" value="Register">
+		<input type="reset" name="reset" value="Reset">
+
+</body>
